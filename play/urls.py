@@ -8,7 +8,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 urlpatterns = patterns('',
              
     # Examples:
-     url(r'^restfm/$', views.FooView.as_view()),
+     url(r'^restfm/$', views.ApiView.as_view()),
     # url(r'^$', 'play.views.home', name='home'),
     # url(r'^play/', include('play.foo.urls')),
 

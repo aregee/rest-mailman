@@ -18,11 +18,11 @@ from mailmanclient import Client
 
 client = Client('http://localhost:8001/3.0', 'restadmin', 'restpass')
 
-class FooView(generics.ListCreateAPIView):
+class ApiView(generics.ListCreateAPIView):
 
-    serializer_class = FooSerializer
+    serializer_class = MailmanSerializer
 
     def list(self, request, *args, **kwargs):
-        fooObj = FooObject(field=client.domains)
-        serializer = self.serializer_class(fooObj)
+        listObj = MailmanObject(field=client.domains)
+        serializer = self.serializer_class(listObj)
         return Response(serializer.data)

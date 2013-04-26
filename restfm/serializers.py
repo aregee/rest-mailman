@@ -3,11 +3,11 @@ from rest_framework import serializers
 
 # Serializer
 
-class FooSerializer(serializers.Serializer):
+class MailmanSerializer(serializers.Serializer):
     foo_field = serializers.CharField(max_length=200)
 
 
 # Your "model"
-class FooObject(object):
+class MailmanObject(object):
     def __init__(self, field):
         self.foo_field = field

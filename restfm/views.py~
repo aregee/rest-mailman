@@ -1,0 +1,14 @@
+# Create your views here.
+from restfm.serializers import FooSerializer
+from rest_framework import generics 
+
+
+# View
+class FooView(generics.ListAPIView):
+
+    serializer_class = FooSerializer
+
+    def list(self, request, *args, **kwargs):
+        fooObj = FooObj(field="Hello world")
+        serializer = self.serializer_class(fooObj)
+        return Response(serializer.data)

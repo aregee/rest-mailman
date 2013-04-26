@@ -7,7 +7,7 @@ class MailmanSerializer(serializers.Serializer):
     foo_field = serializers.CharField(max_length=200)
 
 
-# Your "model"
+# model
 class MailmanObject(object):
     def __init__(self, field):
         self.foo_field = field

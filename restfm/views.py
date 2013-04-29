@@ -23,6 +23,6 @@ class ApiView(generics.ListCreateAPIView):
     serializer_class = MailmanSerializer
 
     def list(self, request, *args, **kwargs):
-        listObj = MailmanObject(field=client.domains)
+        listObj = MailmanObject(field=client.system)
         serializer = self.serializer_class(listObj)
         return Response(serializer.data)
